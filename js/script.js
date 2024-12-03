@@ -14,12 +14,12 @@ fetch(url)
             // Loop through the sentiment data and display each news item
             sentimentData.feed.forEach(item => {
                 const newsItem = document.createElement('div');
-                newsItem.classList.add('news-item');
-                
+                newsItem.classList.add('bg-white', 'm-4', 'p-6', 'w-full', 'max-w-4xl', 'shadow-lg', 'rounded-lg');
+
                 newsItem.innerHTML = `
-                    <h2>${item.title}</h2>
-                    <p>${item.summary}</p>
-                    <a href="${item.url}" target="_blank">Read more</a>
+                    <h2 class="text-xl font-bold mb-2">${item.title}</h2>
+                    <p class="text-gray-700 mb-4">${item.summary}</p>
+                    <a href="${item.url}" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">Read more</a>
                 `;
                 
                 newsContainer.appendChild(newsItem);
